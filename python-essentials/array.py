@@ -1,6 +1,6 @@
 # Initialise 1D array
-arr = [1]*3 # [1, 1, 1]
 arr = [ 1 for i in range(3) ]
+arr = [1]*3 # [1, 1, 1]
 
 # Initialise 2D array
 matrix = [[0 for c in range(cols)] for r in range(rows)]
@@ -28,6 +28,7 @@ arr.sort(reverse=True)
 
 # Reverse
 arr = arr[::-1]
+reversed(arr)
 
 # Subarray
 arr = [1,2,3,4]
