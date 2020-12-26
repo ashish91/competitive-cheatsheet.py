@@ -1,11 +1,11 @@
 # Initialise
 queue = [3, 2, 1]
 
-# Enqueue
-queue.append(1)
+# Enqueue at beginning
+queue.insert(0, 1)
 
-# Dequeue
-queue.pop(0)
+# Dequeue from end
+queue.pop()
 
 # Front
 queue[0]
