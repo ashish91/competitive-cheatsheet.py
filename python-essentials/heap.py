@@ -6,7 +6,7 @@ heapq.heapify(heap)       # min heap
 heapq._heapify_max(heap)  # max heap
 
 # Add
-heapq.heappush(heap, 4)  													 # min heap
+heapq.heappush(heap, 4)                             # min heap
 heapq.heappush(heap, 4); heapq._heapify_max(heap)  # max heap
 
 # Remove

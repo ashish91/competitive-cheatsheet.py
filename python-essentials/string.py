@@ -16,11 +16,11 @@ string = string.split(',')
 
 # Looping
 for char in string:
-	print('Character: ' + char)
+  print('Character: ' + char)
 
 for index, char in enumerate(string):
-	print('Character: ' + char)
-	print('Character from index: ' + string[index])
+  print('Character: ' + char)
+  print('Character from index: ' + string[index])
 
 # Substring
 string[s:e] # Starting from s and ending at e

@@ -8,19 +8,19 @@ matrix = [[0]*cols]*rows
 
 # Loop By Element
 for element in arr:
-	print(element)
+  print(element)
 # Loop By Index
 for index in range(arr):
-	print(arr[index])
+  print(arr[index])
 # Loop By Index and Element
 for index, element in enumerate(arr):
-	print('Element: ' + element)
-	print('Index: ' + index)
+  print('Element: ' + element)
+  print('Index: ' + index)
 # Loop in Reverse
 for element in reversed(arr):
-	print('Element: ' + element)
+  print('Element: ' + element)
 for index in range(len(arr)-1, -1, -1):
-	print('Element: ' + element)
+  print('Element: ' + element)
 
 # Sorting an array
 arr.sort()
