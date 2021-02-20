@@ -48,7 +48,7 @@ class Heap:
   def heapify(self, pos):
     curr = pos
     while (not self.leaf(curr)) and (self.mem[curr] < self.mem[self.left(curr)] or self.mem[curr] < self.mem[self.right(curr)]):
-      if self.left(curr) < self.right(curr):
+      if self.left(curr) > self.right(curr):
         self.swap(curr, left(curr))
         curr = left(curr)
       else:
