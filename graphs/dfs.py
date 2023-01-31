@@ -1,14 +1,21 @@
 # Using adjacency list
-def dfs(self, vertex, graph):
-  visited = {}
+def dfs(self, size, graph):
+  visited = [False]*size
 
-  def recursive(v):
-    print(v)
-    neighbours = graph[v]
+  # Recursively explore unvisited neighbors
+  # of the node.
+  def recursion(node):
+    neighbours = graph[node]
 
-    for node in neighbours:
-      if node not in visited:
-        visited[node] = True
-        recursive(node)
+    for nei in neighbours:
+      if not visited[nei]:
+        visited[nei] = True
+        recursion(nei)
 
-  recursive(vertex)
+  # Try DFS for all nodes, this ensures nodes
+  # which are not connected to the graph are
+  # also explored.
+  for node in range(size):
+    if not visited[node]:
+      visited[node] = True
+      recursion(node)

@@ -16,28 +16,36 @@ def bfs(self, vertex, graph):
 
     for node in queue:
       print(node)
-      for neighbour in graph[node]:
-        if neighbour not in visited:
-          next_level.append(neighbour)
-          visited[neighbour] = True
+      for nei in graph[node]:
+        if nei not in visited:
+          next_level.append(nei)
+          visited[nei] = True
 
       queue = next_level
 
 # Approach 2
 # Queue is popped while the nodes are appended
-def bfs(self, vertex, graph):
-  visited = {}
+def bfs(self, size, graph):
+  visited = [False]*size
 
-  queue = [vertex]
-  visited[vertex] = True
+  def traverse(node):
+    queue = [node]
+    visited[node] = True
 
-  # Level by level traversal
-  while len(queue) > 0:
-    current = queue.pop(0)
+    while len(queue) > 0:
+      curr = queue.pop(0)
 
-    print(current)
+      print(curr)
 
-    for neighbour in graph[current]:
-      if neighbour not in visited:
-        queue.append(neighbour)
-        visited[current] = True
+      for nei in graph[curr]:
+        if not visited[nei]:
+          visited[curr] = True
+          queue.append(nei)
+
+  # Try BFS for all nodes, this ensures nodes
+  # which are not connected to the graph are
+  # also explored.
+  for node in range(size):
+    if not visited[node]:
+      visited[node] = True
+      traverse(node)
